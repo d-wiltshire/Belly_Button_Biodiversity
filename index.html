@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    .jumbotron {
+background-image: url("https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/157/157973/bacteria.jpg?w=1575");
+background-size: cover;
+}
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center text-white">
+        <b><h1>Belly Button Biodiversity Dashboard</h1></b>
+        <p><b>Use the interactive charts below to explore the dataset</b></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div id="bubble"></div>
+        <h4><center>The chart above displays the different bacteria found in this individual's navel. Both the y-axis and the bubble size refer to the sample size of bacteria found for this individual. Hover over each bubble to learn the bacteria species' names. Note that the scale of the y-axis values changes relative to the sample sizes found for each subject.</center></h4><br></br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><br></br><br>
+        <div id="bar"></div>
+        <h4><center>In the above chart, the top bacteria species found for this individual are listed by OTU ID. Hover over each bar to learn the bacteria names.</center></h4>
+      </div>
+      <div class="col-md-6">
+        <div id="gauge"></div>
+        <h4><center>The above gauge displays the average number of times per week this individual reported washing their navel.</center></h4>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="plots.js"></script> -->
+  <script src="/static/js/charts.js"></script>
+
+</body>
+
+</html>
